@@ -3,6 +3,8 @@ import { Greetings, Hello } from "./Greetings";
 import Welcome from "./Welcome";
 import Profile from "./Profile";
 import Counter from "./Counter";
+import Logger from "./Logger";
+import UsersList from "./UsersList";
 // import components from "./Greetings";
 
 function App() {
@@ -19,6 +21,7 @@ function App() {
       <Welcome message="Welcome to React 18!" />
 
       {/* Profilecard */}
+      <h1>Props</h1>
       <Profile
         image="https://via.placeholder.com/150"
         name="Lawrence Osuru"
@@ -32,7 +35,11 @@ function App() {
 
       />
 
+      <h1>UseState and useeffect</h1>
+
       <Counter />
+      <Logger />
+      <UsersList />
 
 
     </div>
