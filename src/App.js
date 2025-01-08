@@ -58,7 +58,7 @@ function App() {
 
       <BrowserRouter>
         <nav>
-          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link>
+          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link> | <Link to="/user/osuru" >User osuru</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
