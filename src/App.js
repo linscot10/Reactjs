@@ -16,6 +16,9 @@ import Home from "./Home";
 import About from "./About";
 import Contact from "./Contact";
 import User from "./User";
+import Dashboard from "./Dashboard";
+import Profile_1 from "./Profile_1";
+import Settings from "./Settings";
 
 function App() {
   return (
@@ -58,7 +61,7 @@ function App() {
 
       <BrowserRouter>
         <nav>
-          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link> | <Link to="/user/osuru" >User osuru</Link>
+          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link> | <Link to="/user/osuru" >User osuru</Link>   <Link to="/dashboard" >Dashboard</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -77,6 +80,11 @@ function App() {
           <Route path="/posts" element={<Posts />} />
           <Route path="/TodoApp" element={<TodoApp />} />
           <Route path="/user/:id" element={<User />} />
+          <Route path="/dashboard" element={<Dashboard />} >
+            <Route path="profile_1" element={<Profile_1 />} />
+            <Route path="settings" element={<Settings />} />
+          </Route>
+
         </Routes>
       </BrowserRouter>
 
