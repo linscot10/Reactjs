@@ -19,6 +19,8 @@ import User from "./User";
 import Dashboard from "./Dashboard";
 import Profile_1 from "./Profile_1";
 import Settings from "./Settings";
+import HomeRedirect from "./HomeRedirect";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -84,6 +86,9 @@ function App() {
             <Route path="profile_1" element={<Profile_1 />} />
             <Route path="settings" element={<Settings />} />
           </Route>
+
+          <Route path="/homeRedirect" element={<HomeRedirect />} />
+          <Route path="*" element={<NotFound/>} />
 
         </Routes>
       </BrowserRouter>
