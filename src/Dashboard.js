@@ -6,6 +6,7 @@ const Dashboard = () => {
         <div>
             <h1>DashBoard</h1>
             <Outlet />
+            {/* outlet is used for nested routing  */}
         </div>
     )
 }
