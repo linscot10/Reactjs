@@ -24,6 +24,7 @@ import NotFound from "./NotFound";
 import RecipeDetails from "./RecipeDetails";
 import RecipeHome from "./RecipeHome";
 import Recipes from "./Recipes";
+import CounterReducer from "./CounterReducer";
 
 function App() {
   return (
@@ -66,7 +67,7 @@ function App() {
 
       <BrowserRouter>
         <nav>
-          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link> | <Link to="/user/osuru" >User osuru</Link>   <Link to="/dashboard" >Dashboard</Link> || <Link to='/homeRecipe'> Home Page</Link> || <Link to='/recipe'> Recipe Page</Link> || <Link to='/recipeDetails/mchele'> Recipe Details Page</Link>
+          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link> | <Link to="/user/osuru" >User osuru</Link>   <Link to="/dashboard" >Dashboard</Link> || <Link to='/homeRecipe'> Home Page</Link> || <Link to='/recipe'> Recipe Page</Link> || <Link to='/recipeDetails/mchele'> Recipe Details Page</Link> || <Link to='/reduceCounter'> Reducer Counter</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -95,6 +96,7 @@ function App() {
           <Route path="/homeRecipe" element={<RecipeHome />} />
           <Route path="/recipeDetails/:id" element={<RecipeDetails />} />
           <Route path="/recipe" element={<Recipes />} />
+          <Route path="/reduceCounter" element={<CounterReducer />} />
 
         </Routes>
       </BrowserRouter>
