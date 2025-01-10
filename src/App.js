@@ -25,10 +25,18 @@ import RecipeDetails from "./RecipeDetails";
 import RecipeHome from "./RecipeHome";
 import Recipes from "./Recipes";
 import CounterReducer from "./CounterReducer";
-
+import ToggleTheme from "./contextApi/ToggleTheme";
+import ConsumeTheme from "./contextApi/ConsumeTheme";
+import FormData from "./forms/FormData";
+import UncontrolledFormData from "./forms/UncontrolledFormData";
+import BasicFormValidation from "./forms/BasicFormValidation";
 function App() {
   return (
     <div className="App">
+
+      <ToggleTheme>
+        <ConsumeTheme />
+      </ToggleTheme>
       {/* <components.Greetings name='Lawrence' />
       <components.Greetings name='Osuru' />
       <components.Hello jina='scott' /> */}
@@ -67,7 +75,7 @@ function App() {
 
       <BrowserRouter>
         <nav>
-          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link> | <Link to="/user/osuru" >User osuru</Link>   <Link to="/dashboard" >Dashboard</Link> || <Link to='/homeRecipe'> Home Page</Link> || <Link to='/recipe'> Recipe Page</Link> || <Link to='/recipeDetails/mchele'> Recipe Details Page</Link> || <Link to='/reduceCounter'> Reducer Counter</Link>
+          <Link to="/">Home</Link> | <Link to="/about">About Us</Link> | <Link to="/contact">Contact Us</Link> | <Link to="/todoApp">TODO App</Link> | <Link to="/logger">Logger</Link> | <Link to="/UsersList">UserList</Link> | <Link to="/posts">Posts</Link> | <Link to="/user/1" >User 1</Link> | <Link to="/user/2" >User 2</Link> | <Link to="/user/osuru" >User osuru</Link>   <Link to="/dashboard" >Dashboard</Link> || <Link to='/homeRecipe'> Home Page</Link> || <Link to='/recipe'> Recipe Page</Link> || <Link to='/recipeDetails/mchele'> Recipe Details Page</Link> || <Link to='/reduceCounter'> Reducer Counter</Link>  || <Link to='/form'>Form</Link>  || <Link to='/unform'>FormData</Link> || <Link to='/validationform'>Validation</Link>
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -97,7 +105,9 @@ function App() {
           <Route path="/recipeDetails/:id" element={<RecipeDetails />} />
           <Route path="/recipe" element={<Recipes />} />
           <Route path="/reduceCounter" element={<CounterReducer />} />
-
+          <Route path="/form" element={<FormData />} />
+          <Route path="/unform" element={<UncontrolledFormData />} />
+          <Route path="/validationform" element={<BasicFormValidation />} />
         </Routes>
       </BrowserRouter>
 
