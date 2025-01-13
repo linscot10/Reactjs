@@ -22,7 +22,9 @@ const Api = () => {
                 setLoading(false)
             }
         }
-    })
+
+        fetchData()
+    }, [])
     return (
         <div>
 
