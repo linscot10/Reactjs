@@ -13,9 +13,13 @@ const Api = () => {
             try {
                 const response = await fetch("https://jsonplaceholder.typicode.com/posts");
                 if (!response.ok)
-                    throw new Error("Network Response was not okay")
+                    throw new Error("Network Response was not okay");
+                const result = await response.json();
+                setData(result)
             } catch (error) {
-
+                setError(error.message)
+            } finally {
+                setLoading(false)
             }
         }
     })
